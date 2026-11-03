@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>year and month</title>
+</head>
+<body>
+<h2>calender</h2>
+enter year:<input type="number"id="year">
+<br><br>
+enter month(1-12):<input type="number"id="month">
+<br><br>
+<button onclick="calender()">generate</button>
+<p id="result"></p>
+<script>
+function calender()
+{
+var y=document.getElementById("year").value;
+var m=document.getElementById("month").value;
+var days=new Date(y,m,0).getDate();
+document.getElementById("result").innerHTML="year:"+y+"<br>"+"month:"+m+"<br>"+"number of days:"+days;
+}
+</script>
+</body>
+</html>

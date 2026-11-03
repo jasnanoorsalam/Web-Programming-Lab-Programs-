@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>mouse over event</title>
+</head>
+<body>
+<h2>JAVASCRIPT Mouse Event Handling</h2>
+<div onmouseover="changeContent()"onmouseout="restoreContent()">
+<img id="img"src="images1.jpeg"width="200"height="150">
+<h3 id="mytext">Welcome to my page</h3>
+</div>
+<script>
+    function changeContent(){
+       document.getElementById("img").src="javascript.jpeg";
+       document.getElementById("mytext").innerHTML="hello! welcome to javascript!";
+       }
+    function restoreContent(){
+       document.getElementById("img").src="images.jpeg";
+       document.getElementById("mytext").innerHTML="welcome to my page";
+       }
+    </script>
+    </body>
+    </html>

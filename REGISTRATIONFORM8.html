@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>registration form</title>
+</head>
+<body>
+<h2>registration form</h2>
+<form on submit="return validate()">
+name:<input type="text"id="name">
+<br><br>
+email:<input type="email" id="email">
+<br><br>
+phone:<input type="phone" id="phone">
+<br><br>
+password:<input type="password" id="password">
+<br><br>
+<input type="submit"value="register">
+</form>
+<script>
+fuction validate()
+{
+var name=document.getElementById("name").value;
+var phone=document.getElementById("phone").value;
+var password=document.getElementById("password").value;
+if(name=="")
+{
+alert("please enter your name");
+retuen false;
+}
+if(email=="")
+{
+alert("please enter your email");
+retuen false;
+}
+if(phone=="")
+{
+alert("please enter your phone");
+retuen false;
+}
+if(password=="")
+{
+alert("please enter your password");
+retuen false;
+}
+alert("registration successfull");
+return true;
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

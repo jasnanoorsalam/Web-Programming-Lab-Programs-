@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Exam</title>
+<style>
+   body{font-family:arial; padding:20px;}
+   .q{margin-bottom:15px;}
+   #timer{color:red; font-weight:bolod;}
+</style>
+</head>
+<body>
+
+<h2>Online Exam - Javascript</h2>
+<p>Time Left: <span id="timer">60</span> sec</p>
+
+<form id="examForm">
+<div class="q">
+    1. What does HTML sytand for?<br>
+   <input type="radio" name="q1" value="a"> Hyper Text Markup Language<br>
+   <input type="radio" name="q1" value="a"> High Tech Modern Language<br>
+</div>
+<div class="q">
+    2.JS is used for?<br>
+    <input type="radio" name="q1" value="a">Styling <br>
+    <input type="radio" name="q1" value="a">Interactivity<br>
+</div>
+<div class="q">
+    3.Which event is for mouse over?<br>
+    <input type="radio" name="q1" value="a"> onmouseover <br>
+    <input type="radio" name="q1" value="a"> onclick<br>
+</div>
+<button type="button" onclick="submitExam()">Submit</button>
+</form>
+
+<h3 id="result"></h3>
+
+<scrpit>
+// Timer
+let time=60;
+let t = setInterval(()=>{
+   time--:
+   document.getElementById("timer").innerText=time;
+   if(time<=0){ clearInterval(t); submitExam(); }
+},1000;
+
+function submitExam(){
+   clearInterval(t);
+   let score=0;
+   if(document.querySelector('input[name="q1"]:checked')?.value=="a") score++;
+   if(document.querySelector('input[name="q2"]:checked')?.value=="b") score++;
+   if(document.querySelector('input[name="q3"]:checked')?.value=="a") score++;
+   
+   document.getElementById("result").innerText = "you score: "+score"/3";
+}
+</script>
+
+</body>
+</html>
+
+
